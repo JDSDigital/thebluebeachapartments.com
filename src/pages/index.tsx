@@ -1,8 +1,8 @@
 import React from "react";
 
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import Image from "../components/image";
-import SEO from "../components/seo";
+import Seo from "../components/Seo";
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
@@ -11,7 +11,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title={t("header.home")} />
+      <Seo title={t("header.home")} />
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
