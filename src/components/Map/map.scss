@@ -1,0 +1,10 @@
+.map-container {
+  height: 400px !important;
+  width: 100% !important;
+
+  .location-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 3px black;
+  }
+}
