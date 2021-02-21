@@ -1,37 +1,67 @@
-import React, { FC } from "react";
-import { Link } from "gatsby";
+import React, { FC, useRef, useState, useEffect } from "react";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import {
+  AppBar,
+  Container,
+  makeStyles,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import "./Header.module.scss";
+
+const useStyles = makeStyles(() => ({
+  appBarTransparent: {
+    backgroundColor: "transparent",
+    boxShadow: "none",
+  },
+  appBarSolid: {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+  },
+}));
 
 type Props = {
   siteTitle: string;
 };
 
-const Header: FC<Props> = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-);
+const Header: FC<Props> = ({ siteTitle }) => {
+  const { t } = useTranslation();
+  const classes = useStyles();
+
+  const [navBackground, setNavBackground] = useState("appBarTransparent");
+  const navRef = useRef<string | undefined>();
+
+  navRef.current = navBackground;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 200;
+
+      if (show) {
+        setNavBackground("appBarSolid");
+      } else {
+        setNavBackground("appBarTransparent");
+      }
+    };
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <AppBar id="home" position="fixed" className={classes[navRef.current]}>
+      <Container>
+        <Toolbar>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>
+            {siteTitle}
+          </Typography>
+          <AnchorLink to="/">{t("header.home")}</AnchorLink>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
 
 export default Header;

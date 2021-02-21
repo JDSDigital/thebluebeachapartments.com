@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `The Blue Beach Apartments`,
+    description: `Website for a new property development in Tenerife.`,
+    author: `Jorge Daniel Sosa <jdsosa@gmail.com>`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto\:300,400,400i,700`],
+        fonts: [`Monserrat\:300,400,400i,700`],
         display: "swap",
       },
     },
@@ -65,6 +65,12 @@ module.exports = {
             escapeValue: false,
           },
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
       },
     },
   ],

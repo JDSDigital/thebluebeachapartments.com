@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import CustomThemeProvider from "./Theme";
 import Header from "./Header";
-import "./Layout.scss";
+import "./Layout.module.scss";
 
 const Layout: FC = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,13 +26,7 @@ const Layout: FC = ({ children }) => {
   return (
     <CustomThemeProvider>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div>
         <main>{children}</main>
         <footer
           style={{

@@ -6,5 +6,8 @@
     "secondary": {
       "main": "#d5b568"
     }
+  },
+  "typography": {
+    "fontFamily": "'Monserrat', 'Helvetica', 'sans-serif'"
   }
 }

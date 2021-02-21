@@ -6,13 +6,16 @@ import Seo from "../components/Seo";
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
+import MainBanner from "../components/MainBanner";
+
 const IndexPage = () => {
   const { t } = useTranslation();
 
   return (
     <Layout>
       <Seo title={t("header.home")} />
-      <h1>Hi people</h1>
+      <MainBanner />
+      <h1 className="test-class">Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
