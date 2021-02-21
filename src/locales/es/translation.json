@@ -1,5 +1,8 @@
 {
   "header": {
     "home": "Inicio"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados."
   }
 }

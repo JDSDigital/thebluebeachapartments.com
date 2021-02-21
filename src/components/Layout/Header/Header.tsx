@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
     boxShadow: "none",
   },
   appBarSolid: {
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backgroundColor: "rgba(17, 17, 17, 0.8)",
   },
 }));
 
