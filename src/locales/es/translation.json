@@ -1,6 +1,19 @@
 {
   "header": {
-    "home": "Inicio"
+    "home": "Inicio",
+    "contact": "Contacto"
+  },
+  "contact": {
+    "title": "Contacto",
+    "phone": "Teléfono",
+    "email": "Correo",
+
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje",
+      "send": "Enviar"
+    }
   },
   "footer": {
     "copyright": "Todos los derechos reservados."

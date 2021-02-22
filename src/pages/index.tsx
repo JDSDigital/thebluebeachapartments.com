@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Layout from "../components/Layout";
 import Image from "../components/image";
@@ -7,6 +7,7 @@ import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
 import MainBanner from "../components/MainBanner";
+import Contact from "../components/Contact";
 import Map from "../components/Map";
 
 const IndexPage = () => {
@@ -16,14 +17,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title={t("header.home")} />
       <MainBanner />
-      <h1 className="test-class">Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+      <Contact />
       <Map />
     </Layout>
   );

@@ -1,8 +1,9 @@
 import React, { FC, useRef, useState, useEffect } from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import scrollTo from "gatsby-plugin-smoothscroll";
 import {
   AppBar,
+  Button,
   Container,
   makeStyles,
   Toolbar,
@@ -51,13 +52,16 @@ const Header: FC<Props> = ({ siteTitle }) => {
   }, []);
 
   return (
-    <AppBar id="home" position="fixed" className={classes[navRef.current]}>
+    <AppBar position="fixed" className={classes[navRef.current]}>
       <Container>
         <Toolbar>
           <Typography variant="h6" style={{ flexGrow: 1 }}>
             {siteTitle}
           </Typography>
-          <AnchorLink to="/">{t("header.home")}</AnchorLink>
+          <Button onClick={() => scrollTo("#home")}>{t("header.home")}</Button>
+          <Button onClick={() => scrollTo("#contact")}>
+            {t("header.contact")}
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>

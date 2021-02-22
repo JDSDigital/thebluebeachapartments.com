@@ -16,7 +16,7 @@ const MapView = ({
   zoom = 18,
   language = "es",
 }: Props) => (
-  <div className="map-container">
+  <section className="map-container">
     <GoogleMapReact
       bootstrapURLKeys={{
         key: `${process.env.GOOGLE_MAPS_API_KEY}`,
@@ -27,7 +27,7 @@ const MapView = ({
     >
       <LocationPin lat={lat} lng={lng} />
     </GoogleMapReact>
-  </div>
+  </section>
 );
 
 export default MapView;

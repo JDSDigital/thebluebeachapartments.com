@@ -1,6 +1,19 @@
 {
   "header": {
-    "home": "Home"
+    "home": "Home",
+    "contact": "Contact"
+  },
+  "contact": {
+    "title": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
   },
   "footer": {
     "copyright": "All rights reserved."
