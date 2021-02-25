@@ -1,6 +1,7 @@
 {
   "header": {
     "home": "Home",
+    "lifestyle": "Lifestyle",
     "contact": "Contact"
   },
   "contact": {
@@ -13,6 +14,22 @@
       "email": "Email",
       "message": "Message",
       "send": "Send"
+    }
+  },
+  "lifestyle": {
+    "title": "LifeStyle",
+
+    "design": {
+      "title": "Diseño",
+      "description": "Diseño moderno y minimalista, amplias terrazas con doble cristal y grandes ventanas para creación de un habiente luminoso y acogedor."
+    },
+    "location": {
+      "title": "Ubicación",
+      "description": "Situación estratégica entre la playa La Tejita y los campos de golf, en una amplia parcela que ocupa una manzana de forma rectangular de 101x 30,55 mts. con una superficie neta de 3.085,63 m2."
+    },
+    "environment": {
+      "title": "Entorno",
+      "description": "A poca distancia de los Abrigos se encuentra la famosa playa “La Tejita” conocida por diversas áreas para practicar wind y kitesurf atrayendo cada año más turistas de los países del Norte de Europa y del Este. Los campos de golf de Golf del Sur y Amarilla Golf se sitúan a tan solo 5 minutos conduciendo."
     }
   },
   "footer": {

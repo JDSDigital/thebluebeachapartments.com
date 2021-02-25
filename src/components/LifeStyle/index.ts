@@ -1,0 +1,1 @@
+export { LifeStyle } from "./LifeStyle";

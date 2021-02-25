@@ -9,6 +9,7 @@ import { graphql } from "gatsby";
 import MainBanner from "../components/MainBanner";
 import Contact from "../components/Contact";
 import Map from "../components/Map";
+import { LifeStyle } from "../components/LifeStyle";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title={t("header.home")} />
       <MainBanner />
+      <LifeStyle />
       <Contact />
       <Map />
     </Layout>
