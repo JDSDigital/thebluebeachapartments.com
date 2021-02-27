@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import Layout from "../components/Layout";
-import Image from "../components/image";
 import Seo from "../components/Seo";
-import { Link, useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
-import MainBanner from "../components/MainBanner";
-import Contact from "../components/Contact";
-import Map from "../components/Map";
+import { MainBanner } from "../components/MainBanner";
 import { LifeStyle } from "../components/LifeStyle";
+import { Design } from "../components/Design";
+import { Interior } from "../components/Interior";
+import { Contact } from "../components/Contact";
+import { MapView } from "../components/Map";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -19,8 +20,10 @@ const IndexPage = () => {
       <Seo title={t("header.home")} />
       <MainBanner />
       <LifeStyle />
+      <Design />
+      <Interior />
       <Contact />
-      <Map />
+      <MapView />
     </Layout>
   );
 };

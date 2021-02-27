@@ -1,3 +1,1 @@
-import { MainBanner } from "./MainBanner";
-
-export default MainBanner;
+export { MainBanner } from "./MainBanner";

@@ -10,7 +10,7 @@ type Props = {
   language?: string;
 };
 
-const MapView = ({
+export const MapView = ({
   lat = 28.029797,
   lng = -16.59129,
   zoom = 18,
@@ -29,5 +29,3 @@ const MapView = ({
     </GoogleMapReact>
   </section>
 );
-
-export default MapView;
