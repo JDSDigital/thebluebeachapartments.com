@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import Img from "gatsby-image";
 import "./MainBanner.scss";
+import { Container } from "@material-ui/core";
 
 export const MainBanner = () => {
   const images = useStaticQuery(graphql`
@@ -13,12 +14,25 @@ export const MainBanner = () => {
           }
         }
       }
+      logo: file(relativePath: { eq: "logo.jpg" }) {
+        childImageSharp {
+          fixed(width: 300) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
   return (
     <section id="home" className="section-banner">
       <Img fluid={images.banner.childImageSharp.fluid} className="main-image" />
+      <Container className="position-relative">
+        <Img
+          fixed={images.logo.childImageSharp.fixed}
+          className="main-image-logo"
+        />
+      </Container>
     </section>
   );
 };

@@ -1,9 +1,17 @@
 .section-banner {
   padding: 0;
+  position: relative;
 
   .main-image {
+    position: relative;
     object-fit: cover;
     object-position: bottom;
     height: 600px;
+  }
+
+  .main-image-logo {
+    position: absolute !important;
+    right: 2em;
+    bottom: 2em;
   }
 }
