@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Button } from "@material-ui/core";
 import Field from "./Field";
-// import { sendMail } from "../../utils";
+import { sendMail } from "../../../utils";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import "./Form.scss";
 
@@ -20,7 +20,7 @@ export const Form = () => {
 
   const handleMail = () => {
     if (state.name !== "" && state.email !== "" && state.message !== "") {
-      // sendMail(state);
+      sendMail(state);
       setSent(true);
       setState({ name: "", email: "", message: "" });
     } else {

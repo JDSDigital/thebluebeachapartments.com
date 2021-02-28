@@ -11,8 +11,8 @@ type Props = {
 };
 
 export const MapView = ({
-  lat = 28.029797,
-  lng = -16.59129,
+  lat = 28.030139,
+  lng = -16.590464,
   zoom = 18,
   language = "es",
 }: Props) => (
