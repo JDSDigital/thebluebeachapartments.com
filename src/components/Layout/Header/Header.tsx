@@ -59,8 +59,17 @@ const Header: FC<Props> = ({ siteTitle }) => {
             {siteTitle}
           </Typography>
           <Button onClick={() => scrollTo("#home")}>{t("header.home")}</Button>
+          <Button onClick={() => scrollTo("#project")}>
+            {t("header.project")}
+          </Button>
           <Button onClick={() => scrollTo("#lifestyle")}>
             {t("header.lifestyle")}
+          </Button>
+          <Button onClick={() => scrollTo("#design")}>
+            {t("header.design")}
+          </Button>
+          <Button onClick={() => scrollTo("#interior")}>
+            {t("header.interior")}
           </Button>
           <Button onClick={() => scrollTo("#contact")}>
             {t("header.contact")}

@@ -6,6 +6,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next";
 import { graphql } from "gatsby";
 
 import { MainBanner } from "../components/MainBanner";
+import { Project } from "../components/Project";
 import { LifeStyle } from "../components/LifeStyle";
 import { Design } from "../components/Design";
 import { Interior } from "../components/Interior";
@@ -19,6 +20,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title={t("header.home")} />
       <MainBanner />
+      <Project />
       <LifeStyle />
       <Design />
       <Interior />

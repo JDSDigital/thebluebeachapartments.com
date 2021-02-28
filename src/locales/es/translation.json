@@ -1,8 +1,27 @@
 {
   "header": {
     "home": "Inicio",
+    "project": "Proyecto",
     "lifestyle": "Lifestyle",
+    "design": "Diseño",
+    "interior": "Interior",
     "contact": "Contacto"
+  },
+
+  "project": {
+    "title": "Proyecto",
+
+    "p1": "The BLUE Beach apartments",
+    "p2": "Aquí encuentras tu hogar…",
+    "p3": "The Blue beach apartments es un nuevo proyecto residencial de 59 viviendas incluyendo plazas de garaje, trasteros y amplios locales comerciales diseñado con ideas modernas minimalistas que destaca por la elegancia de su construcción.",
+    "p4": "Un lugar ideal donde desarrollar tu vida sin preocupaciones, con la combinación perfecta entre diseño moderno y autenticidad de las tradiciones canarias.",
+
+    "l1": "Localización espectacular a pocos pasos del océano y del centro de la localidad",
+    "l2": "Amplias terrazas, diseño moderno y innovador",
+    "l3": "Cada vivienda dispone de una plaza del garaje comunitario",
+    "l4": "Vecindad de todos los servicios",
+    "l5": "Áticos con impresionantes vistas al mar y Teide",
+    "l6": "Ubicación estratégica entre la famosa playa La Tejita con simbólica Montaña Roja y campos de golf del Golf del Sur y Amarilla Golf"
   },
 
   "lifestyle": {

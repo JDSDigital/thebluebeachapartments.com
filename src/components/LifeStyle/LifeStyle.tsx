@@ -47,7 +47,9 @@ export const LifeStyle = () => {
               className="lifestyle-image"
             />
             <Typography variant="h5">{t("lifestyle.design.title")}</Typography>
-            <Typography>{t("lifestyle.design.description")}</Typography>
+            <Typography variant="body2">
+              {t("lifestyle.design.description")}
+            </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Img
@@ -57,7 +59,9 @@ export const LifeStyle = () => {
             <Typography variant="h5">
               {t("lifestyle.location.title")}
             </Typography>
-            <Typography>{t("lifestyle.location.description")}</Typography>
+            <Typography variant="body2">
+              {t("lifestyle.location.description")}
+            </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Img
@@ -67,7 +71,9 @@ export const LifeStyle = () => {
             <Typography variant="h5">
               {t("lifestyle.environment.title")}
             </Typography>
-            <Typography>{t("lifestyle.environment.description")}</Typography>
+            <Typography variant="body2">
+              {t("lifestyle.environment.description")}
+            </Typography>
           </Grid>
         </Grid>
       </Container>
