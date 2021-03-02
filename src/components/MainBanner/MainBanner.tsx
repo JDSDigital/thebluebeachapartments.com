@@ -1,23 +1,24 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import Img from "gatsby-image";
 import "./MainBanner.scss";
-import { Container } from "@material-ui/core";
+import ImageGallery from "react-image-gallery";
 
 export const MainBanner = () => {
   const images = useStaticQuery(graphql`
     query MainBanner {
-      banner: file(relativePath: { eq: "properties/6.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1366) {
-            ...GatsbyImageSharpFluid
-          }
+      banner: allFile(
+        filter: {
+          extension: { eq: "png" }
+          relativeDirectory: { eq: "properties" }
         }
-      }
-      logo: file(relativePath: { eq: "logo-2.jpg" }) {
-        childImageSharp {
-          fixed(width: 300) {
-            ...GatsbyImageSharpFixed
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 1366) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
@@ -26,13 +27,22 @@ export const MainBanner = () => {
 
   return (
     <section id="home" className="section-banner">
-      <Img fluid={images.banner.childImageSharp.fluid} className="main-image" />
-      {/* <Container className="position-relative">
-        <Img
-          fixed={images.logo.childImageSharp.fixed}
-          className="main-image-logo"
-        />
-      </Container> */}
+      <ImageGallery
+        items={images.banner.edges.map(image => ({
+          original: image.node.childImageSharp.fluid.src,
+          srcSet: image.node.childImageSharp.fluid.srcSet,
+          sizes: image.node.childImageSharp.fluid.sizes,
+        }))}
+        slideInterval={7000}
+        autoPlay={true}
+        lazyLoad={true}
+        showNav={false}
+        showFullscreenButton={false}
+        showPlayButton={false}
+        showThumbnails={false}
+        disableKeyDown={true}
+        disableSwipe={true}
+      />
     </section>
   );
 };
