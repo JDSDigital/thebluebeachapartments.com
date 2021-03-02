@@ -7,9 +7,10 @@ import {
   Container,
   makeStyles,
   Toolbar,
-  Typography,
 } from "@material-ui/core";
-import "./Header.module.scss";
+import "./Header.scss";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 const useStyles = makeStyles(() => ({
   appBarTransparent: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles(() => ({
     boxShadow: "none",
   },
   appBarSolid: {
-    backgroundColor: "rgba(17, 17, 17, 0.8)",
+    backgroundColor: "white",
   },
 }));
 
@@ -27,6 +28,18 @@ type Props = {
 
 const Header: FC<Props> = ({ siteTitle }) => {
   const { t } = useTranslation();
+  const images = useStaticQuery(graphql`
+    query Header {
+      logo: file(relativePath: { eq: "logo-2.jpg" }) {
+        childImageSharp {
+          fixed(width: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
   const classes = useStyles();
 
   const [navBackground, setNavBackground] = useState("appBarTransparent");
@@ -55,9 +68,9 @@ const Header: FC<Props> = ({ siteTitle }) => {
     <AppBar position="fixed" className={classes[navRef.current]}>
       <Container>
         <Toolbar>
-          <Typography variant="h6" style={{ flexGrow: 1 }}>
-            {siteTitle}
-          </Typography>
+          <div className="logo-navbar">
+            <Img fixed={images.logo.childImageSharp.fixed} />
+          </div>
           <Button onClick={() => scrollTo("#home")}>{t("header.home")}</Button>
           <Button onClick={() => scrollTo("#project")}>
             {t("header.project")}

@@ -9,7 +9,7 @@ export const Footer = () => {
   const { t } = useTranslation();
   const images = useStaticQuery(graphql`
     query Footer {
-      logo: file(relativePath: { eq: "logo.jpg" }) {
+      logo: file(relativePath: { eq: "logo-2.jpg" }) {
         childImageSharp {
           fixed(width: 300) {
             ...GatsbyImageSharpFixed

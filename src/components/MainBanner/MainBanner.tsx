@@ -7,14 +7,14 @@ import { Container } from "@material-ui/core";
 export const MainBanner = () => {
   const images = useStaticQuery(graphql`
     query MainBanner {
-      banner: file(relativePath: { eq: "main-banner-2.jpg" }) {
+      banner: file(relativePath: { eq: "properties/6.png" }) {
         childImageSharp {
           fluid(maxWidth: 1366) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      logo: file(relativePath: { eq: "logo.jpg" }) {
+      logo: file(relativePath: { eq: "logo-2.jpg" }) {
         childImageSharp {
           fixed(width: 300) {
             ...GatsbyImageSharpFixed
@@ -27,12 +27,12 @@ export const MainBanner = () => {
   return (
     <section id="home" className="section-banner">
       <Img fluid={images.banner.childImageSharp.fluid} className="main-image" />
-      <Container className="position-relative">
+      {/* <Container className="position-relative">
         <Img
           fixed={images.logo.childImageSharp.fixed}
           className="main-image-logo"
         />
-      </Container>
+      </Container> */}
     </section>
   );
 };

@@ -10,14 +10,14 @@ export const LifeStyle = () => {
 
   const images = useStaticQuery(graphql`
     query LifeStyleImages {
-      design: file(relativePath: { eq: "design.jpg" }) {
+      design: file(relativePath: { eq: "properties/3.png" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      location: file(relativePath: { eq: "location.jpg" }) {
+      location: file(relativePath: { eq: "properties/5.png" }) {
         childImageSharp {
           fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid

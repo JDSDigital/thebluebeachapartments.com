@@ -1,12 +1,14 @@
 .section-banner {
   padding: 0;
   position: relative;
+  background-color: white;
 
   .main-image {
     position: relative;
     object-fit: cover;
     object-position: bottom;
-    height: 600px;
+    // height: 600px;
+    height: 100vh;
   }
 
   .main-image-logo {
