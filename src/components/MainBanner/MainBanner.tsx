@@ -22,17 +22,31 @@ export const MainBanner = () => {
           }
         }
       }
+      temp: file(relativePath: { eq: "properties/7.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1366) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
   return (
     <section id="home" className="section-banner">
       <ImageGallery
-        items={images.banner.edges.map(image => ({
-          original: image.node.childImageSharp.fluid.src,
-          srcSet: image.node.childImageSharp.fluid.srcSet,
-          sizes: image.node.childImageSharp.fluid.sizes,
-        }))}
+        // items={images.banner.edges.map(image => ({
+        //   original: image.node.childImageSharp.fluid.src,
+        //   srcSet: image.node.childImageSharp.fluid.srcSet,
+        //   sizes: image.node.childImageSharp.fluid.sizes,
+        // }))}
+        items={[
+          {
+            original: images.temp.childImageSharp.fluid.src,
+            srcSet: images.temp.childImageSharp.fluid.srcSet,
+            sizes: images.temp.childImageSharp.fluid.sizes,
+          },
+        ]}
         slideInterval={7000}
         autoPlay={true}
         lazyLoad={true}

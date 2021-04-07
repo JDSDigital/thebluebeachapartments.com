@@ -30,7 +30,7 @@ const Header: FC<Props> = ({ siteTitle }) => {
   const { t } = useTranslation();
   const images = useStaticQuery(graphql`
     query Header {
-      logo: file(relativePath: { eq: "logo-2.jpg" }) {
+      logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(width: 200) {
             ...GatsbyImageSharpFixed
