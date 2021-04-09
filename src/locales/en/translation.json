@@ -5,7 +5,8 @@
     "lifestyle": "Lifestyle",
     "design": "Design",
     "interior": "Interior",
-    "contact": "Contact"
+    "contact": "Contact",
+    "apartments": "Apartments"
   },
 
   "project": {
@@ -55,6 +56,24 @@
     "p1": "Funcionalidad, minimalismo y modernidad son tres pilastras que sujetan la idea trasmitida por los arquitectos en creación de los interiores de THE Blue beach apartments. ",
     "p2": "La climatización aporta un alto grado de confort durante todo el año.",
     "p3": "Se destaca el diseño en general de las líneas simples y elegantes: cas cocinas color blanco equipadas con electrodomésticos…. y encimeras de …, un material de gran resistencia y fácil mantenimiento. Los pavimentos de gres, los baños con sanitarios…"
+  },
+
+  "apartments": {
+    "title": "Apartamentos",
+
+    "table": {
+      "typology": "Tipología",
+      "rooms": "Habitaciones",
+      "floor": "Planta",
+      "area": "Superficie",
+      "terrace": "Terraza",
+      "courtyard": "Patio",
+      "blueprint": "Plano",
+      "download": "Descargar",
+      "ground": "Bajo",
+      "first": "Primero",
+      "second": "Segundo"
+    }
   },
 
   "contact": {

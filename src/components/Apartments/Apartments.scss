@@ -1,0 +1,28 @@
+.section-apartments {
+  table {
+    margin-bottom: 0;
+    min-width: 700px;
+
+    a {
+      color: black;
+      font-weight: bold;
+    }
+
+    .table-head {
+      border-bottom: 2px solid black;
+      th {
+        font-weight: bold;
+      }
+    }
+    .table-body {
+      tr {
+        &:nth-of-type(odd) {
+          background-color: rgba(0, 0, 0, 0.09);
+        }
+      }
+      td {
+        font-size: 14px;
+      }
+    }
+  }
+}
