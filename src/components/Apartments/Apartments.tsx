@@ -56,6 +56,8 @@ export const Apartments = () => {
     }
   `);
 
+  console.log(data);
+
   return (
     <section id="apartments" className="section-apartments">
       <Container>
@@ -89,7 +91,11 @@ export const Apartments = () => {
                   <TableCell>{row.courtyard}</TableCell>
                   <TableCell align="right">
                     <a
-                      href={data.documents.edges[index].node.publicURL}
+                      href={
+                        data.documents.edges.find(pdf =>
+                          pdf.node.publicURL.endsWith(`/${index + 1}.pdf`)
+                        ).node.publicURL
+                      }
                       download
                     >
                       {t("apartments.table.download")}
