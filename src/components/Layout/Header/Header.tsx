@@ -13,6 +13,7 @@ import {
 import "./Header.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles(() => ({
   appBarTransparent: {
@@ -42,6 +43,34 @@ const Header: FC<Props> = ({ siteTitle }) => {
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(width: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      es: file(relativePath: { eq: "flags/sp.jpg" }) {
+        childImageSharp {
+          fixed(height: 20) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      en: file(relativePath: { eq: "flags/uk.jpg" }) {
+        childImageSharp {
+          fixed(height: 20) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      ru: file(relativePath: { eq: "flags/ru.jpg" }) {
+        childImageSharp {
+          fixed(height: 20) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      it: file(relativePath: { eq: "flags/it.jpg" }) {
+        childImageSharp {
+          fixed(height: 20) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -82,6 +111,8 @@ const Header: FC<Props> = ({ siteTitle }) => {
     };
   }, []);
 
+  console.log(images);
+
   return (
     <AppBar position="fixed" className={classes[navRef.current]}>
       <Container>
@@ -107,6 +138,9 @@ const Header: FC<Props> = ({ siteTitle }) => {
           <Button onClick={() => scrollTo("#apartments")}>
             {t("header.apartments")}
           </Button>
+          <Button onClick={() => scrollTo("#gallery")}>
+            {t("header.gallery")}
+          </Button>
           <Button onClick={() => scrollTo("#contact")}>
             {t("header.contact")}
           </Button>
@@ -115,7 +149,11 @@ const Header: FC<Props> = ({ siteTitle }) => {
             aria-haspopup="true"
             onClick={handleClick}
           >
-            {languagesTranslations[language]}
+            <Img
+              fixed={images[language].childImageSharp.fixed}
+              alt={language}
+            />
+            <ExpandMoreIcon />
           </Button>
           <Menu
             id="languages-menu"
@@ -128,6 +166,11 @@ const Header: FC<Props> = ({ siteTitle }) => {
               return (
                 <MenuItem onClick={handleClose}>
                   <Link key={lng} to={originalPath} language={lng}>
+                    <Img
+                      fixed={images[lng].childImageSharp.fixed}
+                      alt={lng}
+                      className="mr-1"
+                    />
                     {languagesTranslations[lng]}
                   </Link>
                 </MenuItem>

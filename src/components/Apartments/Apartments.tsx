@@ -56,8 +56,6 @@ export const Apartments = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <section id="apartments" className="section-apartments">
       <Container>

@@ -1,0 +1,27 @@
+.section-gallery {
+  background-color: rgba(0, 0, 0, 0.09);
+
+  .gallery {
+    text-align: center;
+
+    .gallery-button {
+      width: 14%;
+      @media (max-width: 960px) {
+        width: 33%;
+      }
+    }
+
+    .gallery-thumbnail {
+      object-fit: cover;
+      object-position: center;
+      height: 100px;
+      width: 100%;
+    }
+  }
+}
+
+.gallery-main {
+  button {
+    border: 0;
+  }
+}

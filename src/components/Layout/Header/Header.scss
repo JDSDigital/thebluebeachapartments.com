@@ -14,5 +14,12 @@ header {
 #languages-menu {
   ul > li > a {
     color: black !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .mr-1 {
+    margin-right: 0.5em;
   }
 }

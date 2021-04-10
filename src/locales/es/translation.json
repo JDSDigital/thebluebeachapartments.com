@@ -6,7 +6,8 @@
     "design": "Diseño",
     "interior": "Interior",
     "contact": "Contacto",
-    "apartments": "Apartamentos"
+    "apartments": "Apartamentos",
+    "gallery": "Galería"
   },
 
   "project": {
@@ -74,6 +75,10 @@
       "first": "Primero",
       "second": "Segundo"
     }
+  },
+
+  "gallery": {
+    "title": "Galería"
   },
 
   "contact": {

@@ -13,6 +13,7 @@ import { Interior } from "../components/Interior";
 import { Contact } from "../components/Contact";
 import { MapView } from "../components/Map";
 import { Apartments } from "../components/Apartments/Apartments";
+import { Gallery } from "../components/Gallery/Gallery";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -26,6 +27,7 @@ const IndexPage = () => {
       <Design />
       <Interior />
       <Apartments />
+      <Gallery />
       <Contact />
       <MapView />
     </Layout>
