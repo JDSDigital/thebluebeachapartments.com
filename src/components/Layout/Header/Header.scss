@@ -11,3 +11,8 @@ header {
     justify-content: flex-start;
   }
 }
+#languages-menu {
+  ul > li > a {
+    color: black !important;
+  }
+}

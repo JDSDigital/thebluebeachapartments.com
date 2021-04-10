@@ -9,8 +9,8 @@
     position: relative;
     object-fit: cover;
     object-position: bottom;
-    // height: 600px;
-    height: 100vh;
+    height: 400px;
+    // height: 100vh;
   }
 
   .main-image-logo {
@@ -24,7 +24,7 @@
   }
   .image-gallery-slide .image-gallery-image {
     width: 100% !important;
-    height: 100vh !important;
+    height: 70vh !important;
     object-fit: cover !important;
     object-position: center !important;
   }

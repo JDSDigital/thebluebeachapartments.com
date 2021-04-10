@@ -10,69 +10,69 @@
   },
 
   "project": {
-    "title": "Proyecto",
+    "title": "Project",
 
     "p1": "The BLUE Beach apartments",
-    "p2": "Encuentra aquí tu hogar…",
-    "p3": "The Blue beach apartments es un nuevo proyecto residencial de 59 viviendas incluyendo plazas de garaje, trasteros y amplios locales comerciales diseñado con ideas modernas minimalistas que destaca por la elegancia de su construcción.",
-    "p4": "Un lugar ideal donde desarrollar tu vida sin preocupaciones, con la combinación perfecta entre diseño moderno y autenticidad de las tradiciones canarias.",
+    "p2": "Find Your Home…",
+    "p3": "The BLUE Beach Apartments is a new residential complex of 59 of one and two bedroom apartments, including garages and storages, as well as spacious retail space designed in a minimalist style, which gives special elegance to the project.",
+    "p4": "An ideal place for your comfort lifestyle, with perfect combination of modern design and authentic Canary Islands traditions.",
 
-    "l1": "Ubicación estratégica entre la famosa playa La Tejita con simbólica Montaña Roja y campos de golf del Golf del Sur y Amarilla Golf ",
-    "l2": "Existe la posibilidad en un futuro de obtener la licencia de Vivienda Vacacional.",
-    "l3": "Amplias terrazas, el diseño moderno e innovador.",
-    "l4": "Cada vivienda dispone de una plaza del garaje comunitario.",
-    "l5": "Vecindad de todos los servicios.",
-    "l6": "Áticos con impresionantes vistas al mar y Teide"
+    "l1": "Strategic location between the famous beach La Tejita with the symbolic Montana Roja and golf courses Amarilla Golf, Golf del Sur.",
+    "l2": "In the future the possibility to obtain a tourist license.",
+    "l3": "Spacious terraces with modern design.",
+    "l4": "Each apartment has a parking space.",
+    "l5": "Close to all infrastructure: banks, restaurants, supermarkets, southern airport, colleges.",
+    "l6": "Penthouses with stunning ocean and volcano views."
   },
 
   "lifestyle": {
-    "title": "LifeStyle",
+    "title": "Lifestyle",
 
     "design": {
-      "title": "Diseño",
-      "description": "Diseño moderno y minimalista, amplias terrazas con doble cristal y grandes ventanas para creación de un habiente luminoso y acogedor."
+      "title": "Design",
+      "description": "Modern and minimalist design with big double glazed terraces and large windows to create a bright and homely atmosphere."
     },
     "location": {
-      "title": "Ubicación",
-      "description": "Situación estratégica entre la playa La Tejita y los campos de golf, en una amplia parcela que ocupa una manzana de forma rectangular de 101x 30,55 mts. con una superficie neta de 3.085,63 m2."
+      "title": "Location",
+      "description": "Strategic location between La Tejita beach and the golf courses, on a large plot of 3,085.63 m2."
     },
     "environment": {
-      "title": "Entorno",
-      "description": "A poca distancia de los Abrigos se encuentra la famosa playa “La Tejita” conocida por diversas áreas para practicar wind y kitesurf atrayendo cada año más turistas de los países del Norte de Europa y del Este. Los campos de golf de Golf del Sur y Amarilla Golf se sitúan a tan solo 5 minutos conduciendo."
+      "title": "Infrastructure",
+      "description": "Los Abrigos is known for its famous fish restaurants and 'La Tejita' with its water sports : wind and kitesurfing , that attracts every year more tourists Northern Europe and the East is in the walking distance. The golf courses Golf del Sur and Amarilla Golf as well as supermarkets of Las Chafiras are  just in 5 minutes drive."
     }
   },
 
   "design": {
-    "title": "Arquitectura y diseño",
+    "title": "Arquitecture design",
 
-    "p1": "THE Blue beach apartments ha sido diseñado a la vanguardia en lo referente a instalaciones y domótica, una construcción abierta a la luz en estilo minimalista y funcional.",
-    "p2": "Todos apartamentos cuentan con amplios ventanales y grandes terrazas, terminadas con piso de gres y baranda de cristal con vidrio de seguridad. Cocinas totalmente equipadas con electrodomésticos y alta eficiencia energética.",
-    "p3": "Los cánones de arquitectura moderna han guiado los arquitectos en los diseños tanto de los interiores como de los exteriores para creación de una estructura harmoniosa y un habiente luminoso y acogedor."
+    "p1": "THE Blue beach apartments have been designed with up-to-date installations and smart home control in a modern and functional style.",
+    "p2": "All apartments have large windows and spacious terraces, finished with stoneware floors and glass railing with security glass. Fully equipped kitchens with appliances and high energy efficiency.",
+    "p3": "New trends both in external and interior design were implemented by the architects to mark out the project as a homely and harmonized place for living."
   },
 
   "interior": {
-    "title": "Interiores",
+    "title": "Interior design",
 
-    "p1": "Funcionalidad, minimalismo y modernidad son tres pilastras que sujetan la idea trasmitida por los arquitectos en creación de los interiores de THE Blue beach apartments. ",
-    "p2": "La climatización aporta un alto grado de confort durante todo el año.",
-    "p3": "Se destaca el diseño en general de las líneas simples y elegantes: cas cocinas color blanco equipadas con electrodomésticos…. y encimeras de …, un material de gran resistencia y fácil mantenimiento. Los pavimentos de gres, los baños con sanitarios…"
+    "p1": "Functionality, minimalism and modern style are three main elements elaborated in the interior design of the project.",
+    "p2": "Air conditioning that provides a comfort living all year round.",
+    "p3": "The overall design with simple and elegant lines: white kitchens equipped with modern appliances and countertops, Bathrooms with fitters and bidet, fitted wardrobes."
   },
 
   "apartments": {
-    "title": "Apartamentos",
+    "title": "Apartments",
 
     "table": {
-      "typology": "Tipología",
-      "rooms": "Habitaciones",
-      "floor": "Planta",
-      "area": "Superficie",
-      "terrace": "Terraza",
-      "courtyard": "Patio",
-      "blueprint": "Plano",
-      "download": "Descargar",
-      "ground": "Bajo",
-      "first": "Primero",
-      "second": "Segundo"
+      "typology": "Typology",
+      "rooms": "Rooms",
+      "floor": "Floor",
+      "area": "Area",
+      "terrace": "Terrace",
+      "courtyard": "Courtyard",
+      "blueprint": "Blueprint",
+      "download": "Download",
+      "ground": "Ground floor",
+      "first": "First",
+      "second": "Second"
     }
   },
 
