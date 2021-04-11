@@ -28,7 +28,7 @@ export const Project = () => {
             </Typography>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <ul>
               <li>
                 <Typography variant="body2">{t("project.l1")}</Typography>
@@ -42,7 +42,7 @@ export const Project = () => {
             </ul>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <ul>
               <li>
                 <Typography variant="body2">{t("project.l4")}</Typography>

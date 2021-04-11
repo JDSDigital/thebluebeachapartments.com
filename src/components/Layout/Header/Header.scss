@@ -23,3 +23,25 @@ header {
     margin-right: 0.5em;
   }
 }
+.side-menu {
+  &--logo {
+    padding: 1em;
+  }
+  &--list {
+    a {
+      color: black !important;
+    }
+  }
+
+  .languages-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      display: flex;
+      padding: 14px 0;
+      border-bottom: none;
+    }
+  }
+}

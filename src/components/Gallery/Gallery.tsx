@@ -48,6 +48,7 @@ export const Gallery = () => {
         <div className="gallery">
           {images.gallery.edges.map((image, index) => (
             <Button
+              key={`gallery-${index}`}
               onClick={() => handleClick(index)}
               className="gallery-button"
             >

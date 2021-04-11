@@ -1,3 +1,9 @@
 .section-interior {
   background-color: rgba(0, 0, 0, 0.09);
+
+  .reverse-xs {
+    @media (max-width: 960px) {
+      flex-wrap: wrap-reverse;
+    }
+  }
 }
