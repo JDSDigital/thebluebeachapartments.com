@@ -11,8 +11,8 @@ export const Footer = () => {
     query Footer {
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 300) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -22,10 +22,10 @@ export const Footer = () => {
   return (
     <footer>
       <Container>
-        <Grid container spacing={2} justify="center">
-          <Grid item xs={12} sm={6}>
+        <Grid container spacing={2} justify="space-between">
+          <Grid item xs={12} sm={3}>
             <Img
-              fixed={images.logo.childImageSharp.fixed}
+              fluid={images.logo.childImageSharp.fluid}
               className="main-image"
             />
           </Grid>

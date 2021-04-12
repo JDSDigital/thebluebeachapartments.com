@@ -22,7 +22,7 @@ export const MainBanner = () => {
           }
         }
       }
-      temp: file(relativePath: { eq: "properties/9.jpg" }) {
+      temp: file(relativePath: { eq: "properties/10.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1366) {
             ...GatsbyImageSharpFluid

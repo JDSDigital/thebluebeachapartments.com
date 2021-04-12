@@ -24,9 +24,13 @@
   }
   .image-gallery-slide .image-gallery-image {
     width: 100% !important;
-    height: 70vh !important;
+    height: 80vh !important;
     object-fit: cover !important;
     object-position: center !important;
+
+    @media (max-width: 960px) {
+      height: 60vh !important;
+    }
   }
 
   .image-gallery-slide {

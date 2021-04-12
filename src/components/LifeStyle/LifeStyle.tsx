@@ -40,7 +40,7 @@ export const LifeStyle = () => {
         <Typography variant="h4" className="section-title" align="center">
           {t("lifestyle.title")}
         </Typography>
-        <Grid container spacing={5}>
+        <Grid container spacing={4}>
           <Grid item xs={12} sm={4}>
             <Img
               fluid={images.design.childImageSharp.fluid}

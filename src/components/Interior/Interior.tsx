@@ -26,7 +26,7 @@ export const Interior = () => {
         <Typography variant="h4" className="section-title" align="center">
           {t("interior.title")}
         </Typography>
-        <Grid container spacing={5} alignItems="center" className="reverse-xs">
+        <Grid container spacing={4} alignItems="center" className="reverse-xs">
           <Grid item xs={12} sm={6}>
             <Typography variant="body2" className="mb-3">
               {t("interior.p1")}

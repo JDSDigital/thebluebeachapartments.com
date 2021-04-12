@@ -26,7 +26,7 @@ export const Design = () => {
         <Typography variant="h4" className="section-title" align="center">
           {t("design.title")}
         </Typography>
-        <Grid container spacing={5} alignItems="center">
+        <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} sm={6}>
             <Img
               fluid={images.architecture.childImageSharp.fluid}
