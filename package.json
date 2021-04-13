@@ -30,9 +30,11 @@
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.8.7",
     "react-image-gallery": "^1.0.9",
+    "react-pdf": "^5.2.0",
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "@types/react-pdf": "^5.0.2",
     "prettier": "2.2.1"
   },
   "keywords": [
