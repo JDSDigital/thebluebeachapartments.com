@@ -1,4 +1,10 @@
-import { Button, Container, Dialog, Typography } from "@material-ui/core";
+import {
+  IconButton,
+  Container,
+  Dialog,
+  Link,
+  Typography,
+} from "@material-ui/core";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import React, { useState } from "react";
 import "./Apartments.scss";
@@ -11,20 +17,19 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { useStaticQuery, graphql } from "gatsby";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
+import ZoomOutMapIcon from "@material-ui/icons/ZoomOutMap";
 
-// import { Document, Page, pdfjs } from "react-pdf";
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-function createData(
+const createData = (
   type: string,
   rooms: string,
   floor: string,
   area: string,
   terrace: string,
   courtyard?: string
-) {
+) => {
   return { type, rooms, floor, area, terrace, courtyard };
-}
+};
 
 const rows = [
   createData("01", "2", "ground", "65,46m2", "45,95m2", null),
@@ -45,8 +50,20 @@ const rows = [
   createData("16", "1", "second", "43,67m2", "12,42m2", null),
 ];
 
-const SimpleDialog = ({ selectedDocument, onClose, open }) => {
+const SimpleDialog = ({ onClose, open, pdf }) => {
+  return (
+    <Dialog open={open} onClose={onClose} maxWidth={"lg"}>
+      <Document file={pdf}>
+        <Page pageNumber={1} scale={1.5} />
+      </Document>
+    </Dialog>
+  );
+};
+
+export const Apartments = () => {
   const { t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const [selectedDocument, setSelectedDocument] = useState(0);
 
   const data = useStaticQuery(graphql`
     query Apartments {
@@ -62,30 +79,13 @@ const SimpleDialog = ({ selectedDocument, onClose, open }) => {
     }
   `);
 
-  const pdf = data.documents.edges.find(
-    pdf => pdf.node.name === selectedDocument.toString()
-  );
+  const pdf = (index: number) => {
+    const result = data.documents.edges.find(
+      pdf => pdf.node.name === index.toString()
+    );
 
-  if (!pdf) return null;
-
-  return (
-    <Dialog
-      aria-labelledby={`blueprint-${selectedDocument}`}
-      open={open}
-      onClose={onClose}
-      maxWidth={"lg"}
-    >
-      <Document file={pdf.node.publicURL}>
-        <Page pageNumber={1} scale={1.5} />
-      </Document>
-    </Dialog>
-  );
-};
-
-export const Apartments = () => {
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const [selectedDocument, setSelectedDocument] = useState(0);
+    return result && result.node.publicURL;
+  };
 
   const handleClickOpen = (index: number) => {
     setSelectedDocument(index + 1);
@@ -128,9 +128,15 @@ export const Apartments = () => {
                   <TableCell>{row.terrace}</TableCell>
                   <TableCell>{row.courtyard}</TableCell>
                   <TableCell align="right">
-                    <Button onClick={() => handleClickOpen(index)}>
-                      {t("apartments.table.details")}
-                    </Button>
+                    <IconButton
+                      onClick={() => handleClickOpen(index)}
+                      color="inherit"
+                    >
+                      <ZoomOutMapIcon />
+                    </IconButton>
+                    <IconButton href={pdf(index + 1)} download color="inherit">
+                      <CloudDownloadIcon />
+                    </IconButton>
                   </TableCell>
                 </TableRow>
               ))}
@@ -138,9 +144,9 @@ export const Apartments = () => {
           </Table>
         </TableContainer>
         <SimpleDialog
-          selectedDocument={selectedDocument}
           open={open}
           onClose={handleClose}
+          pdf={pdf(selectedDocument)}
         />
       </Container>
     </section>

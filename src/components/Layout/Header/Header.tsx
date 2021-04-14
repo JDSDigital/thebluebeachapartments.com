@@ -127,9 +127,7 @@ const Header: FC<Props> = ({ siteTitle }) => {
       <Container>
         <Toolbar>
           <div className="logo-navbar">
-            {navBackground === "appBarSolid" && (
-              <Img fixed={images.logo.childImageSharp.fixed} />
-            )}
+            <Img fixed={images.logo.childImageSharp.fixed} />
           </div>
 
           <Hidden smDown>

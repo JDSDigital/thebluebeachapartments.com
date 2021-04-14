@@ -3,7 +3,7 @@
     "home": "Home",
     "project": "Project",
     "lifestyle": "Lifestyle",
-    "design": "Design",
+    "design": "Architecture",
     "interior": "Interior",
     "contact": "Contact",
     "apartments": "Apartments",
@@ -39,15 +39,15 @@
     },
     "environment": {
       "title": "Infrastructure",
-      "description": "Los Abrigos is known for its famous fish restaurants and 'La Tejita' with its water sports : wind and kitesurfing , that attracts every year more tourists Northern Europe and the East is in the walking distance. The golf courses Golf del Sur and Amarilla Golf as well as supermarkets of Las Chafiras are  just in 5 minutes drive."
+      "description": "Los Abrigos is known for its famous fish restaurants and 'La Tejita' with its water sports: wind and kitesurfing, that attracts every year more tourists from the Northern Europe and the East are in the walking distance. The golf courses Golf del Sur and Amarilla Golf as well as supermarkets of Las Chafiras are  just in 5 minutes drive."
     }
   },
 
   "design": {
-    "title": "Arquitecture design",
+    "title": "Architecture design",
 
     "p1": "THE Blue beach apartments have been designed with up-to-date installations and smart home control in a modern and functional style.",
-    "p2": "All apartments have large windows and spacious terraces, finished with stoneware floors and glass railing with security glass. Fully equipped kitchens with appliances and high energy efficiency.",
+    "p2": "All apartments have large windows and spacious terraces, finished with ceramic floors and glass railing with security glass. Fully equipped kitchens with appliances and high energy efficiency.",
     "p3": "New trends both in external and interior design were implemented by the architects to mark out the project as a homely and harmonized place for living."
   },
 

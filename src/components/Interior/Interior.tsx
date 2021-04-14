@@ -10,7 +10,7 @@ export const Interior = () => {
 
   const images = useStaticQuery(graphql`
     query Interior {
-      interior: file(relativePath: { eq: "properties/4.png" }) {
+      interior: file(relativePath: { eq: "gallery/20.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
