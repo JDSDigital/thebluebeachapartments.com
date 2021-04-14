@@ -78,7 +78,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locales`,
-        languages: [`es`, `en`],
+        languages: [`es`, `en`, `ru`],
         defaultLanguage: `es`,
         siteUrl: `https://thebluebeachapartments.com/`,
         i18nextOptions: {

@@ -38,6 +38,7 @@ type Props = {
 const languagesTranslations = {
   es: "Español",
   en: "English",
+  ru: "Pусский",
 };
 
 const Header: FC<Props> = ({ siteTitle }) => {
