@@ -14,7 +14,10 @@ export const Gallery = () => {
 
   const images = useStaticQuery(graphql`
     query Gallery {
-      gallery: allFile(filter: { relativeDirectory: { eq: "gallery" } }) {
+      gallery: allFile(
+        filter: { relativeDirectory: { eq: "gallery" } }
+        sort: { order: ASC, fields: name }
+      ) {
         edges {
           node {
             childImageSharp {
@@ -22,6 +25,7 @@ export const Gallery = () => {
                 ...GatsbyImageSharpFluid
               }
             }
+            name
           }
         }
       }
@@ -32,6 +36,8 @@ export const Gallery = () => {
     photo: image.node.childImageSharp.fluid.src,
     number: index,
   }));
+
+  console.log(gallery);
 
   const handleClick = index => {
     setSelectedImage(index);

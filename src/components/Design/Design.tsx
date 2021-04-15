@@ -10,7 +10,7 @@ export const Design = () => {
 
   const images = useStaticQuery(graphql`
     query Design {
-      architecture: file(relativePath: { eq: "properties/2.png" }) {
+      architecture: file(relativePath: { eq: "properties/13.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
