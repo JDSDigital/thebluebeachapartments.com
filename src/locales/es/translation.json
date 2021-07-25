@@ -90,7 +90,8 @@
       "name": "Nombre",
       "email": "Correo",
       "message": "Mensaje",
-      "send": "Enviar"
+      "send": "Enviar",
+      "sent": "Enviado"
     }
   },
 

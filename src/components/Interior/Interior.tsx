@@ -3,14 +3,49 @@ import { Container, Grid, Typography } from "@material-ui/core";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import "./Interior.scss";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import ImageGallery from "react-image-gallery";
 
 export const Interior = () => {
   const { t } = useTranslation();
 
   const images = useStaticQuery(graphql`
     query Interior {
-      interior: file(relativePath: { eq: "gallery/20.jpeg" }) {
+      interior1: file(relativePath: { eq: "gallery/06.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      interior2: file(relativePath: { eq: "gallery/10.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      interior3: file(relativePath: { eq: "gallery/11.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      interior4: file(relativePath: { eq: "gallery/15.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      interior5: file(relativePath: { eq: "gallery/16.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      interior6: file(relativePath: { eq: "gallery/19.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
@@ -39,9 +74,21 @@ export const Interior = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Img
-              fluid={images.interior.childImageSharp.fluid}
-              className="main-image"
+            <ImageGallery
+              items={Object.values(images).map((image: any) => ({
+                original: image.childImageSharp.fluid.src,
+                srcSet: image.childImageSharp.fluid.srcSet,
+                sizes: image.childImageSharp.fluid.sizes,
+              }))}
+              slideInterval={7000}
+              autoPlay={true}
+              lazyLoad={true}
+              showNav={false}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              showThumbnails={false}
+              disableKeyDown={true}
+              disableSwipe={true}
             />
           </Grid>
         </Grid>

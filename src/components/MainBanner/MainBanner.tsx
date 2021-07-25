@@ -1,12 +1,40 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import "./MainBanner.scss";
-import Img from "gatsby-image";
+import ImageGallery from "react-image-gallery";
 
 export const MainBanner = () => {
   const images = useStaticQuery(graphql`
     query MainBanner {
-      banner: file(relativePath: { eq: "properties/10.jpg" }) {
+      banner1: file(relativePath: { eq: "properties/7.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      banner2: file(relativePath: { eq: "properties/13.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      banner3: file(relativePath: { eq: "properties/11.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      banner4: file(relativePath: { eq: "properties/12.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      banner5: file(relativePath: { eq: "properties/8.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
@@ -18,7 +46,22 @@ export const MainBanner = () => {
 
   return (
     <section id="home" className="section-banner">
-      <Img fluid={images.banner.childImageSharp.fluid} className="main-image" />
+      <ImageGallery
+        items={Object.values(images).map((image: any) => ({
+          original: image.childImageSharp.fluid.src,
+          srcSet: image.childImageSharp.fluid.srcSet,
+          sizes: image.childImageSharp.fluid.sizes,
+        }))}
+        slideInterval={7000}
+        autoPlay={true}
+        lazyLoad={true}
+        showNav={false}
+        showFullscreenButton={false}
+        showPlayButton={false}
+        showThumbnails={false}
+        disableKeyDown={true}
+        disableSwipe={true}
+      />
     </section>
   );
 };

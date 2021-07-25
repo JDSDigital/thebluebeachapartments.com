@@ -90,7 +90,8 @@
       "name": "Имя",
       "email": "E-mail",
       "message": "Сообщение",
-      "send": "Отправить"
+      "send": "Отправить",
+      "sent": "Sent"
     }
   },
 

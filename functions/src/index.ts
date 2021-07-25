@@ -83,8 +83,8 @@ const template = ({
 exports.sendMail = functions.https.onCall(async data => {
   const mailOptions = {
     from: `The BLUE Beach Project <${functions.config().mail.user}>`,
-    to: "jdsosa@gmail.com",
-    subject: "Correo de prueba",
+    to: "inmobiliariabarreras@gmail.com",
+    subject: "Nuevo mensaje de The BLUE Beach Project",
     html: template({
       name: data.name,
       email: data.email,
