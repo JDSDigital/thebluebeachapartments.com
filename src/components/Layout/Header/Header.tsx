@@ -39,6 +39,7 @@ const languagesTranslations = {
   es: "Español",
   en: "English",
   ru: "Pусский",
+  de: "Deutsche",
 };
 
 const Header: FC<Props> = ({ siteTitle }) => {
@@ -76,6 +77,13 @@ const Header: FC<Props> = ({ siteTitle }) => {
         }
       }
       it: file(relativePath: { eq: "flags/it.jpg" }) {
+        childImageSharp {
+          fixed(height: 20) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      de: file(relativePath: { eq: "flags/de.jpg" }) {
         childImageSharp {
           fixed(height: 20) {
             ...GatsbyImageSharpFixed

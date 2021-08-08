@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 import { Container, Grid, Typography } from "@material-ui/core";
-import "./Footer.module.scss";
+import "./Footer.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
