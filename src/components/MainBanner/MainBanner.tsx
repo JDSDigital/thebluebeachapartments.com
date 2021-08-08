@@ -55,12 +55,13 @@ export const MainBanner = () => {
         slideInterval={7000}
         autoPlay={true}
         lazyLoad={true}
-        showNav={false}
+        showNav={true}
         showFullscreenButton={false}
         showPlayButton={false}
         showThumbnails={false}
-        disableKeyDown={true}
-        disableSwipe={true}
+        disableKeyDown={false}
+        disableSwipe={false}
+        showBullets={true}
       />
     </section>
   );

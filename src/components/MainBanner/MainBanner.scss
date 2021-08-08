@@ -26,11 +26,22 @@
     }
   }
 
-  .image-gallery-slide {
-    opacity: 0;
-    transition: opacity 2000ms ease-out !important;
+  .image-gallery {
+    &-icon:hover {
+      color: #6adaff;
+    }
+
+    &-bullet:focus,
+    &-bullet:hover {
+      background: #6adaff;
+    }
   }
-  .image-gallery-slide.center {
-    opacity: 1;
-  }
+
+  // .image-gallery-slide {
+  //   opacity: 0;
+  //   transition: opacity 2000ms ease-out !important;
+  // }
+  // .image-gallery-slide.center {
+  //   opacity: 1;
+  // }
 }
