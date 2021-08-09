@@ -61,6 +61,7 @@
 
   "apartments": {
     "title": "Apartments",
+    "sold": "{{ amount }} Wohnungen verkauft",
 
     "table": {
       "typology": "Die Architektur",

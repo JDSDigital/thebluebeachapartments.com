@@ -19,6 +19,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import ZoomOutMapIcon from "@material-ui/icons/ZoomOutMap";
+import { Counter } from "../Counter/Counter";
 
 const createData = (
   type: string,
@@ -102,6 +103,8 @@ export const Apartments = () => {
         <Typography variant="h4" className="section-title" align="center">
           {t("apartments.title")}
         </Typography>
+
+        <Counter />
 
         <TableContainer component={Paper}>
           <Table>
