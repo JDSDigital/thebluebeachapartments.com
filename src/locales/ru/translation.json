@@ -61,7 +61,7 @@
 
   "apartments": {
     "title": "Апартаменты",
-    "sold": "{{ amount }} апартаментов проданы",
+    "sold": "Last apartments available!",
 
     "table": {
       "typology": "Планировка",

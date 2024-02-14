@@ -10,7 +10,14 @@ export const Counter = () => {
 
   const image = useStaticQuery(graphql`
     query Counter {
-      counter: file(relativePath: { eq: "sold.png" }) {
+      sold: file(relativePath: { eq: "sold.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sold2: file(relativePath: { eq: "sold2.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
@@ -24,11 +31,14 @@ export const Counter = () => {
     <section id="counter" className="section-counter">
       <Container>
         <div className="counter">
-          <span>{t("apartments.sold", { amount: 27 })}</span>
+          <span>{t("apartments.sold")}</span>
         </div>
         <Grid container justifyContent="center">
           <Grid item xs={12} sm={10} md={8}>
-            <Img fluid={image.counter.childImageSharp.fluid} />
+            <Img fluid={image.sold.childImageSharp.fluid} />
+          </Grid>
+          <Grid item xs={12} sm={10} md={8}>
+            <Img fluid={image.sold2.childImageSharp.fluid} />
           </Grid>
         </Grid>
       </Container>
