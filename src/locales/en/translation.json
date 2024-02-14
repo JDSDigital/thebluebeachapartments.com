@@ -61,7 +61,7 @@
 
   "apartments": {
     "title": "Apartments",
-    "sold": "{{ amount }} apartments sold",
+    "sold": "Last apartments available!",
 
     "table": {
       "typology": "Typology",

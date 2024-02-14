@@ -61,7 +61,7 @@
 
   "apartments": {
     "title": "Apartamentos",
-    "sold": "{{ amount }} apartamentos vendidos",
+    "sold": "¡Últimas viviendas disponibles!",
 
     "table": {
       "typology": "Tipología",

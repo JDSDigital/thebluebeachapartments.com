@@ -61,7 +61,7 @@
 
   "apartments": {
     "title": "Apartments",
-    "sold": "{{ amount }} Wohnungen verkauft",
+    "sold": "Last apartments available!",
 
     "table": {
       "typology": "Die Architektur",
