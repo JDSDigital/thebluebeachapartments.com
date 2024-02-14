@@ -24,7 +24,7 @@ export const Counter = () => {
     <section id="counter" className="section-counter">
       <Container>
         <div className="counter">
-          <span>{t("apartments.sold", { amount: 25 })}</span>
+          <span>{t("apartments.sold", { amount: 27 })}</span>
         </div>
         <Grid container justifyContent="center">
           <Grid item xs={12} sm={10} md={8}>
